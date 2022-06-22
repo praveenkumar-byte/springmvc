@@ -1,0 +1,53 @@
+﻿
+@model Sample.Models.CaliculatorModel;
+
+@{ 
+    ViewData["Title"] = "Caliculator";
+}
+<html>
+<head>
+    <style>
+        .hello {
+            background-color: red;
+            padding: 20px;
+            width: 500px;
+            height: 300px;
+           
+        }
+        body{
+            background-color:black;
+        }
+        .
+        
+    </style>
+    
+</head>
+<body>
+    <div class="hello">
+    <form asp-action="Caliculator">
+        <div>
+            <label>First-Value</label>
+            <input type="text" name="num1" id="num1"  asp-for="num1"/>
+        </div>
+        <div>
+            <label>Second-Value</label>
+            <input type="text" name="num2" id="num2" asp-for="num2" />
+        </div>
+        <div>
+            <label>Total</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="tot" id="tot" asp-for="@ViewData["result"]" disabled />
+        </div>
+        <div>
+
+            <input type="submit"  value="add" asp-for="caliculate" class="btn btn-outline-success">
+            <input type="submit" value="sub" asp-for="caliculate" class="btn btn-outline-success">
+            <input type="submit"  value="div" asp-for="caliculate" class="btn btn-outline-success">
+            <input type="submit" value="mul" asp-for="caliculate" class="btn btn-outline-success">
+
+        </div>
+    </form>
+        </div>
+       
+</body>
+</html>
